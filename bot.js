@@ -588,8 +588,6 @@ client.on('message', message => {
         .addField('$queue', 'اظهار قائمة التشغيل')
 
         .addField('$np', 'اظهار المقطع اللي انت مشغلها حاليا')
-	
-        .addField('$عقاب', 'يعطيك عقابات عشوائية')
         
 	.setFooter('اللهم اني ابرئ نفسي من اي موسيقى اللهم فأشهد')
       message.channel.send(helpEmbed);
@@ -601,17 +599,7 @@ client.on('message', message => {
 ///////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
 
-client.on('message', message => {
-  if(message.content === '$عقاب') {
-    if(!message.channel.guild) return message.reply('**هاذا الامر فقط للسيرفرات**');
-    var edits = ['تعطي بوسه للكل بالصوت' , 'ارقص تكوتا' , 'اعفاء' , 'غني تكوتا' , 'تسب نفسك' 'تضرب نفسك كف' , 'لا تتحرك ابد' , 'تخلي واحد يقول لك كلام حلو' , 'ادخل روم وتغزل باول واحد تسمع صوته' , 'اسرق فلوس وعطها صاحبها قول هديه']
-    var embed = new Discord.RichEmbed()
- .setDescription(`${edits[Math.floor(Math.random() * edits.length)]}`)
- .setFooter('wHybh Developer.')
- .setColor("#000000")
-message.channel.send(embed);
-}
-});
+
 
 /////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
